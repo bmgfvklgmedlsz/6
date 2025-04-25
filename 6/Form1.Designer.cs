@@ -29,19 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.companiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.companiesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).BeginInit();
+            this.companiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.companiesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // companiesBindingSource
-            // 
-            this.companiesBindingSource.DataSource = typeof(_6.Companies);
             // 
             // companiesDataGridView
             // 
@@ -53,9 +50,9 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.companiesDataGridView.DataSource = this.companiesBindingSource;
-            this.companiesDataGridView.Location = new System.Drawing.Point(200, 119);
+            this.companiesDataGridView.Location = new System.Drawing.Point(102, 60);
             this.companiesDataGridView.Name = "companiesDataGridView";
-            this.companiesDataGridView.Size = new System.Drawing.Size(442, 220);
+            this.companiesDataGridView.Size = new System.Drawing.Size(613, 235);
             this.companiesDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -82,17 +79,32 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "City";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
+            // companiesBindingSource
+            // 
+            this.companiesBindingSource.DataSource = typeof(_6.Companies);
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Location = new System.Drawing.Point(80, 358);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(117, 41);
+            this.buttonAdd.TabIndex = 2;
+            this.buttonAdd.Text = "Добавить";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.companiesDataGridView);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.companiesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -108,6 +120,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.Button buttonAdd;
     }
 }
 

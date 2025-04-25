@@ -29,5 +29,16 @@ namespace _6
         {
 
         }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            Form2 frm = new Form2();
+            frm.model = model;
+            DialogResult dr = frm.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                companiesBindingSource.DataSource = model.Companies.ToList();
+            }
+        }
     }
 }
